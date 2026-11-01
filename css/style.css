@@ -1,0 +1,824 @@
+
+/* Үндсэн тохиргоо */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ed;
+    color: #333333;
+    line-height: 1.7;
+}
+
+/* Дээд хэсэг */
+.hero {
+    background: linear-gradient(135deg, #234b3b, #52745c);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+.small-hero {
+    min-height: 200px;
+    padding: 35px 20px;
+}
+
+.small-hero h1 {
+    font-size: 32px;
+}
+
+.eyebrow {
+    color: #c49b65;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+/* Цэс */
+.navbar {
+    background-color: #1d3c30;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #52745c;
+    color: #ffffff;
+}
+
+.nav-links a:visited {
+    color: #e5e5e5;
+}
+
+.nav-links a:active {
+    background-color: #c49b65;
+}
+
+.nav-links a.active {
+    background-color: #c49b65;
+    color: white;
+}
+
+/* Үндсэн агуулга */
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 40px auto;
+}
+
+.section {
+    margin: 65px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    color: #315c48;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Нүүр хуудасны танилцуулга */
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text h2 {
+    color: #315c48;
+    font-size: 29px;
+    margin-bottom: 15px;
+}
+
+.intro-text p {
+    margin-bottom: 12px;
+}
+
+.intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Гэр бүлийн мод */
+.family-tree {
+    background-color: #ffffff;
+    padding: 35px 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.tree-level {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tree-card {
+    background-color: #f5f3ed;
+    border: 1px solid #d9dfd6;
+    border-top: 5px solid #52745c;
+    border-radius: 9px;
+    padding: 22px;
+    width: 260px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tree-card h3 {
+    color: #315c48;
+    margin-bottom: 12px;
+}
+
+.tree-card a {
+    display: inline-block;
+    color: #315c48;
+    font-weight: bold;
+    margin-top: 12px;
+    text-decoration: none;
+}
+
+.tree-card a:hover {
+    color: #c49b65;
+}
+
+.highlight-card {
+    background-color: #315c48;
+    color: white;
+    border-top-color: #c49b65;
+}
+
+.highlight-card h3 {
+    color: white;
+}
+
+.tree-connector {
+    color: #c49b65;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+/* Мэдээллийн карт */
+.three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #52745c;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    color: #315c48;
+    margin-bottom: 10px;
+}
+
+/* Намтрын хэсэг */
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-image {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.profile-content h2 {
+    color: #315c48;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.profile-content h3 {
+    color: #52745c;
+    margin-top: 22px;
+    margin-bottom: 8px;
+}
+
+.profile-content p {
+    margin-bottom: 12px;
+}
+
+.profile-content ul {
+    padding-left: 22px;
+    margin-bottom: 15px;
+}
+
+.profile-content li {
+    margin-bottom: 6px;
+}
+
+.profile-meta {
+    color: #98764b;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+/* Хүүхдүүдийн жагсаалт */
+.children-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.children-list div {
+    background-color: #f5f3ed;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 3px solid #52745c;
+}
+
+/* Хүснэгт */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.history-table th {
+    background-color: #315c48;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.history-table td {
+    padding: 13px;
+    border: 1px solid #dddddd;
+}
+
+.history-table tr:hover {
+    background-color: #f0f4ed;
+}
+
+/* Зургийн цомог */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.gallery-grid figure {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.gallery-grid figure:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.gallery-grid figcaption {
+    text-align: center;
+    padding: 10px;
+    color: #315c48;
+    font-size: 14px;
+}
+
+/* Дэлгэгддэг мэдээлэл */
+.details-box {
+    background-color: white;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border-left: 4px solid #52745c;
+}
+
+.details-box summary {
+    color: #315c48;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.details-box p {
+    margin-top: 12px;
+}
+
+/* Ишлэл */
+.quote-section {
+    background-color: #315c48;
+    color: white;
+    padding: 45px 25px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.quote-section h2 {
+    margin-bottom: 15px;
+}
+
+.quote-section p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Доод хэсэг */
+footer {
+    background-color: #1d3c30;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Гар утас болон жижиг дэлгэц */
+@media screen and (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .nav-links a {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .intro-image img {
+        height: 230px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .profile-image {
+        width: 100%;
+    }
+
+    .profile-image img {
+        height: 300px;
+    }
+
+    .three-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .children-list {
+        grid-template-columns: 1fr;
+    }
+
+    .tree-level {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tree-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 94%;
+    }
+}
+
+/* URGIIN MOD - ZASVAR */
+
+.family-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 20px;
+    text-align: center;
+    overflow: visible;
+}
+
+/* OVEE, EMEE */
+.tree-generation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.tree-couple,
+.tree-level {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+}
+
+.tree-card {
+    position: relative;
+    flex: 1 1 0;
+    width: 100%;
+    max-width: 260px;
+    min-width: 0;
+    min-height: 125px;
+    padding: 25px 12px 18px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #d9dfd6;
+    border-radius: 10px;
+    border-top: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+/* HUISIIN UNGE */
+.gender-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+}
+
+.tree-card.male .gender-line {
+    background-color: #619ac8;
+}
+
+.tree-card.female .gender-line {
+    background-color: #e49ab4;
+}
+
+.tree-card small {
+    display: block;
+    margin-bottom: 7px;
+    color: #777166;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tree-card h3 {
+    margin: 5px 0;
+    color: #315c48;
+    font-size: 17px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.tree-card p {
+    color: #777166;
+    font-size: 14px;
+}
+
+/* OVOO EMEEGEES AAV EEJ RU HOLBOH */
+.tree-branches {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    width: 100%;
+    max-width: 900px;
+    height: 45px;
+}
+
+.branch {
+    justify-self: center;
+    width: 2px;
+    height: 100%;
+    background-color: #c49b65;
+}
+
+/* AAV EEJ */
+.parents-connection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 560px;
+}
+
+.parents-connection::before {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    content: "";
+    background-color: #c49b65;
+}
+
+.parents-connection .tree-level {
+    width: 100%;
+    gap: 16px;
+}
+
+.parents-connection .tree-card {
+    margin-top: 18px;
+}
+
+/* HUUHED */
+.child-branch {
+    width: 2px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #c49b65;
+}
+
+.children-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.children-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #315c48;
+    font-size: 18px;
+}
+
+.children-title span {
+    width: 35px;
+    height: 1px;
+    background-color: #c49b65;
+}
+
+.highlight-card {
+    flex: initial;
+    width: 260px;
+    max-width: 100%;
+    border-color: #d9dfd6;
+    background-color: #f5f3ed;
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+    .tree-generation {
+        gap: 18px;
+    }
+
+    .tree-couple {
+        gap: 9px;
+    }
+
+    .tree-card {
+        padding: 22px 9px 15px;
+    }
+
+    .tree-card h3 {
+        font-size: 15px;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+    .family-tree {
+        padding: 22px 8px;
+    }
+
+    .tree-generation {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tree-couple {
+        gap: 10px;
+    }
+
+    .tree-card {
+        min-height: 110px;
+        padding: 21px 7px 13px;
+    }
+
+    .tree-card h3 {
+        font-size: 13px;
+    }
+
+    .tree-card p,
+    .tree-card small {
+        font-size: 11px;
+    }
+
+    .tree-branches {
+        grid-template-columns: 1fr;
+        height: 30px;
+        gap: 0;
+    }
+
+    .tree-branches .branch:nth-child(2) {
+        display: none;
+    }
+
+    .parents-connection::before {
+        display: none;
+    }
+
+    .parents-connection .tree-level {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .parents-connection .tree-card {
+        margin-top: 10px;
+    }
+
+    .highlight-card {
+        width: 220px;
+    }
+}
+/* ZURGIIG BUTNEER NI HARUULAH */
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background-color: #f5f3ed;
+}
+
+
+/* AAV EEJIIG NEG MOROND BAILUULAH */
+
+.parents-connection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.parents-connection .tree-level {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 560px;
+    gap: 16px;
+}
+
+.parents-connection .tree-card {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin-top: 18px;
+}
+
+/* GAR UTAS */
+@media screen and (max-width: 480px) {
+    .parents-connection .tree-level {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .parents-connection .tree-card {
+        padding: 18px 5px;
+    }
+}
+.hero .eyebrow {
+    background: #1d3c30;
+    padding: 7px 18px;
+    border-radius: 5px;
+}
+
+
